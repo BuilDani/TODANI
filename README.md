@@ -26,13 +26,8 @@ Expense Tracking
 A financial tracking module inspired by Completa.ai, allowing users to log and monitor expenses alongside their tasks.
 
 Tech Stack
-
 Language: Kotlin
-
 IDE: Android Studio
-
 Platform: Android (exclusive)
-
 Development Status
-
 This project is still in its early development phase. The core functionality (recurring tasks and reminders) is the first priority, with AI integration and expense tracking to follow in later stages.
