@@ -25,7 +25,6 @@ import com.example.todani.databinding.ItemTransformBinding
 class TransformFragment : Fragment() {
 
     private var _binding: FragmentTransformBinding? = null
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -53,15 +52,14 @@ class TransformFragment : Fragment() {
         _binding = null
     }
 
-    class TransformAdapter :
-        ListAdapter<String, TransformViewHolder>(object : DiffUtil.ItemCallback<String>() {
+    class TransformAdapter : ListAdapter<String, TransformViewHolder>(object : DiffUtil.ItemCallback<String>() {
 
-            override fun areItemsTheSame(oldItem: String, newItem: String): Boolean =
-                oldItem == newItem
+        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean =
+            oldItem == newItem
 
-            override fun areContentsTheSame(oldItem: String, newItem: String): Boolean =
-                oldItem == newItem
-        }) {
+        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean =
+            oldItem == newItem
+    }) {
 
         private val drawables = listOf(
             R.drawable.avatar_1,
@@ -90,13 +88,11 @@ class TransformFragment : Fragment() {
         override fun onBindViewHolder(holder: TransformViewHolder, position: Int) {
             holder.textView.text = getItem(position)
             holder.imageView.setImageDrawable(
-                ResourcesCompat.getDrawable(holder.imageView.resources, drawables[position], null)
-            )
+                ResourcesCompat.getDrawable(holder.imageView.resources, drawables[position], null))
         }
     }
 
-    class TransformViewHolder(binding: ItemTransformBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class TransformViewHolder(binding: ItemTransformBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val imageView: ImageView = binding.imageViewItemTransform
         val textView: TextView = binding.textViewItemTransform

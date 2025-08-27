@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
 Wrap the DrawerLayout with FrameLayout to use the same View type for the same view ID
 across the layout configurations
 -->
